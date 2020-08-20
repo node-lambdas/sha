@@ -1,9 +1,9 @@
-import { lambda } from '@node-lambdas/core';
+import { lambda, Format } from '@node-lambdas/core';
 import { createHash } from 'crypto';
 
 const configuration = {
   version: 1,
-  readBody: true,
+  input: Format.Buffer,
 };
 
 lambda(configuration, (input, output) => {
