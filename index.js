@@ -4,8 +4,14 @@ import { createHash } from 'crypto';
 const configuration = {
   version: 2,
   actions: {
-    default: {
+    encode: {
+      default: true,
       input: Format.Buffer,
+      description:
+        'Calculate a hash for any input. You can specify hash type with --type option. Must be one of 1, 256 or 512',
+      options: {
+        type: 'number',
+      },
       handler: (input, output) => {
         const type = Number(input.options.type);
 
