@@ -7,8 +7,9 @@ const configuration = {
     encode: {
       default: true,
       input: Format.Buffer,
+      output: Format.Text,
       description:
-        'Calculate a hash for any input. You can specify hash type with --type option. Must be one of 1, 256 or 512',
+        `Calculate a hash for any input.\nYou can specify hash type with --type option.\n\nMust be one of 1, 256 or 512`,
       options: {
         type: 'number',
       },
